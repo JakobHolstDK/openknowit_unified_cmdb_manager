@@ -29,9 +29,14 @@ except:
     print("Error in URL")
     print("You need to set the NETBOX_URL environment variable to the URL of your NetBox instance")
     exit(1)
-    
+
 
 token = os.getenv("NETBOXTOKEN")
+if token == None:
+    print("Error in NETBOXTOKEN")
+    print("You need to set the NETBOXTOKEN environment variable to the API token for your NetBox instance")
+    exit(1)
+    
 
 # Headers containing the API token
 headers = {
