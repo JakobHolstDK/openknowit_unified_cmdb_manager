@@ -19,15 +19,15 @@ try:
     if api_url[-1] == "/":
         api_url = api_url[:-1]
 
-    devices_url = api_url + 'dcim/devices/'
-    vm_url = api_url + 'virtualization/virtual-machines/'
-    cluster_url = api_url + 'virtualization/clusters/'
-    tenant_url = api_url + 'tenancy/tenants/'
-    role_url = api_url + 'dcim/device-roles/'
-    site_url = api_url + 'dcim/sites/'
-    ipam_url = api_url + 'ipam/ip-addresses/'
-    prefix_url = api_url + 'ipam/prefixes/'
-    vlan_url = api_url + 'ipam/vlans/'
+    devices_url = api_url + '/dcim/devices/'
+    vm_url = api_url + '/virtualization/virtual-machines/'
+    cluster_url = api_url + '/virtualization/clusters/'
+    tenant_url = api_url + '/tenancy/tenants/'
+    role_url = api_url + '/dcim/device-roles/'
+    site_url = api_url + '/dcim/sites/'
+    ipam_url = api_url + '/ipam/ip-addresses/'
+    prefix_url = api_url + '/ipam/prefixes/'
+    vlan_url = api_url + '/ipam/vlans/'
 except:
     print("Error in URL")
     print("You need to set the NETBOX_URL environment variable to the URL of your NetBox instance")
