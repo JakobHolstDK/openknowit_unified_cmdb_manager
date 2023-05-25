@@ -29,7 +29,11 @@ try:
     ipam_url = api_url + '/ipam/ip-addresses/'
     prefix_url = api_url + '/ipam/prefixes/'
     vlan_url = api_url + '/ipam/vlans/'
-    users_url = api_url + '/users/'
+    users_url = api_url + '/users/users/'
+    usertokens = api_url + '/users/tokens/'
+    userpermissions = api_url + '/users/permissions/'
+    usergroups = api_url + '/users/groups/'
+    userconfig = api_url + '/users/config/'
     config_context_url = api_url + '/circuits/circuit-terminations/'
     circuit_url = api_url + '/circuits/circuits/'
     provider_url = api_url + '/circuits/providers/'
@@ -83,6 +87,7 @@ def create_user(username, email):
 
   # Create a new user
   try:
+
     response = requests.post(users_url, headers=headers, json=user_data)
     response.raise_for_status()  # Raise an exception for any HTTP error
     new_user = response.json()
