@@ -6,5 +6,5 @@ token = os.getenv("NETBOXTOKEN")
 
 nb = pynetbox.api(
     api,
-    token=token'
+    token=token
 )
