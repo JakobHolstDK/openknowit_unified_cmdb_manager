@@ -16,6 +16,9 @@ import json
 
 api_url = os.getenv("NETBOX_URL")
 try:
+    if api_url[-1] == "/":
+        api_url = api_url[:-1]
+
     devices_url = api_url + 'dcim/devices/'
     vm_url = api_url + 'virtualization/virtual-machines/'
     cluster_url = api_url + 'virtualization/clusters/'
@@ -36,7 +39,7 @@ if token == None:
     print("Error in NETBOXTOKEN")
     print("You need to set the NETBOXTOKEN environment variable to the API token for your NetBox instance")
     exit(1)
-    
+
 
 # Headers containing the API token
 headers = {
