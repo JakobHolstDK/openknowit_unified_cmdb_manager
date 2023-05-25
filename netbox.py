@@ -151,8 +151,8 @@ def list_circuit_terminations():
 def get_circuit_termination_by_device(device):
     return nb.circuits.circuit_terminations.get(device=device)
 
-add_site("test","Demoing Netbox API")
-add_device("test", "test", "test", "test", "test", "test", "test", "test", "test", "test", "test")
+
+add_organization("knowit","knowit")
 
 
 
