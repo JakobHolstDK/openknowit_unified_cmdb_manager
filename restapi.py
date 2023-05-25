@@ -29,7 +29,7 @@ try:
     ipam_url = api_url + '/api/ipam/ip-addresses/'
     prefix_url = api_url + '/api/ipam/prefixes/'
     vlan_url = api_url + '/api/ipam/vlans/'
-    users_url = api_url + '/api//users/users/'
+    users_url = api_url + '/api/users/users/'
     usertokens = api_url + '/api/users/tokens/'
     userpermissions = api_url + '/api/users/permissions/'
     usergroups = api_url + '/api/users/groups/'
